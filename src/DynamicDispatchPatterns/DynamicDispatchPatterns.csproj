@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52685E8A-59BB-4F8C-9B9C-7703AF92B359}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicDispatchPatterns</RootNamespace>
+    <AssemblyName>DynamicDispatchPatterns</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile344</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\DynamicDispatchPatterns.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SolutionVersionInfo.cs">
+      <Link>Properties\SolutionVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Control\BarWidget.cs" />
+    <Compile Include="Control\BazWidget.cs" />
+    <Compile Include="Control\ControlFrobAdapter.cs" />
+    <Compile Include="Control\ControlFrobr.cs" />
+    <Compile Include="Control\FooWidget.cs" />
+    <Compile Include="DynamicKeyword\BarWidget.cs" />
+    <Compile Include="DynamicKeyword\BazWidget.cs" />
+    <Compile Include="DynamicKeyword\DynamicFrobAdapter.cs" />
+    <Compile Include="DynamicKeyword\FooWidget.cs" />
+    <Compile Include="DynamicKeyword\DynamicFrobr.cs" />
+    <Compile Include="FrobResult.cs" />
+    <Compile Include="IFrobAdapter.cs" />
+    <Compile Include="Polymorphic\BarWidget.cs" />
+    <Compile Include="Polymorphic\BazWidget.cs" />
+    <Compile Include="Polymorphic\PolymorphicFrobAdapter.cs" />
+    <Compile Include="Polymorphic\FooWidget.cs" />
+    <Compile Include="Polymorphic\FrobContext.cs" />
+    <Compile Include="Polymorphic\IWidget.cs" />
+    <Compile Include="Polymorphic\PolymorphicFrobr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\BarWidget.cs" />
+    <Compile Include="Reflection\BazWidget.cs" />
+    <Compile Include="Reflection\ReflectingFrobAdapter.cs" />
+    <Compile Include="Reflection\FooWidget.cs" />
+    <Compile Include="Reflection\FrobContext.cs" />
+    <Compile Include="Reflection\ReflectingFrobr.cs" />
+    <Compile Include="TypeDelegateMap\BarWidget.cs" />
+    <Compile Include="TypeDelegateMap\BazWidget.cs" />
+    <Compile Include="TypeDelegateMap\FooWidget.cs" />
+    <Compile Include="TypeDelegateMap\DelegateMapFrobr.cs" />
+    <Compile Include="TypeDelegateMap\DelegateMapFrobAdapter.cs" />
+    <Compile Include="TypeSwitch\BarWidget.cs" />
+    <Compile Include="TypeSwitch\BazWidget.cs" />
+    <Compile Include="TypeSwitch\FooWidget.cs" />
+    <Compile Include="TypeSwitch\TypeSwitchingFrobAdapter.cs" />
+    <Compile Include="TypeSwitch\TypeSwitchingFrobr.cs" />
+    <Compile Include="Visitor\BarWidget.cs" />
+    <Compile Include="Visitor\BazWidget.cs" />
+    <Compile Include="Visitor\FooWidget.cs" />
+    <Compile Include="Visitor\IWidget.cs" />
+    <Compile Include="Visitor\IWidgetVisitor.cs" />
+    <Compile Include="Visitor\VisitingFrobAdapter.cs" />
+    <Compile Include="Visitor\VisitingFrobr.cs" />
+    <Compile Include="WidgetType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
