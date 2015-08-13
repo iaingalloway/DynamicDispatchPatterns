@@ -7,6 +7,7 @@
     using DynamicDispatchPatterns.DynamicKeyword;
     using DynamicDispatchPatterns.Polymorphic;
     using DynamicDispatchPatterns.Reflection;
+    using DynamicDispatchPatterns.TypeDelegateArray;
     using DynamicDispatchPatterns.TypeDelegateMap;
     using DynamicDispatchPatterns.TypeSwitch;
     using DynamicDispatchPatterns.Visitor;
@@ -26,6 +27,7 @@
                     new PolymorphicFrobAdapter(),
                     new ReflectingFrobAdapter(),
                     new DelegateMapFrobAdapter(),
+                    new DelegateArrayFrobAdapter(), 
                     new TypeSwitchingFrobAdapter(),
                     new VisitingFrobAdapter(),
                 }.ShuffleInfinitely().Take(35);
@@ -55,6 +57,8 @@
 
                 stopwatch.Reset();
             }
+
+            Console.WriteLine("Done. Press any key to close.");
 
             Console.ReadKey();
         }

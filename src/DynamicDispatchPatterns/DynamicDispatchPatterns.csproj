@@ -68,6 +68,11 @@
     <Compile Include="Reflection\FooWidget.cs" />
     <Compile Include="Reflection\FrobContext.cs" />
     <Compile Include="Reflection\ReflectingFrobr.cs" />
+    <Compile Include="TypeDelegateArray\BarWidget.cs" />
+    <Compile Include="TypeDelegateArray\BazWidget.cs" />
+    <Compile Include="TypeDelegateArray\DelegateArrayFrobAdapter.cs" />
+    <Compile Include="TypeDelegateArray\DelegateArrayFrobr.cs" />
+    <Compile Include="TypeDelegateArray\FooWidget.cs" />
     <Compile Include="TypeDelegateMap\BarWidget.cs" />
     <Compile Include="TypeDelegateMap\BazWidget.cs" />
     <Compile Include="TypeDelegateMap\FooWidget.cs" />
