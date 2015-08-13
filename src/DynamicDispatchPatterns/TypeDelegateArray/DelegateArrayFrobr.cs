@@ -45,6 +45,7 @@
                 if (map[i].Key == widgetType)
                 {
                     map[i].Value(widget);
+                    return;
                 }
             }
         }
