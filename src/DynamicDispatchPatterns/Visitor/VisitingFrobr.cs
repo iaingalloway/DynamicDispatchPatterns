@@ -21,22 +21,9 @@
             }
         }
 
-        public void Frob(object widget)
+        public void Frob(IWidget widget)
         {
-            var widgetType = widget.GetType();
-
-            if (widgetType == typeof(FooWidget))
-            {
-                this.foo++;
-            }
-            else if (widgetType == typeof(BarWidget))
-            {
-                this.bar++;
-            }
-            else if (widgetType == typeof(BazWidget))
-            {
-                this.baz++;
-            }
+            widget.Accept(this);
         }
 
         public void Visit(FooWidget widget)
